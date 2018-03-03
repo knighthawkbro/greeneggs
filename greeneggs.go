@@ -20,17 +20,32 @@ type set interface {
 }
 
 func main() {
-	fruits := array.New()
-	fmt.Println("The driver method with an array...")
-	driver(fruits)
-	fmt.Println("The suess method with an array...")
-	suess(fruits)
+	fmt.Println("\n*************************************************")
+	fmt.Print("*\tRunning driver function as an array...")
+	fmt.Println("\n*************************************************")
+	fmt.Println("")
+	arr := array.New()
+	driver(arr)
+
+	fmt.Println("\n*************************************************")
+	fmt.Print("*\tRunning seuss function as an array...")
+	fmt.Println("\n*************************************************")
+	fmt.Println("")
+	arr = array.New()
+	seuss(arr)
+
+	fmt.Println("\n*************************************************")
+	fmt.Print("*\tRunning driver function as a list...")
+	fmt.Println("\n*************************************************")
 	fmt.Println("")
 	words := list.New()
-	fmt.Println("The driver method with an list...")
 	driver(words)
+	fmt.Println("\n*************************************************")
+	fmt.Print("*\tRunning seuss function as a list...")
+	fmt.Println("\n*************************************************")
+	fmt.Println("")
 	fmt.Println("The suess method with an list...")
-	suess(words)
+	seuss(words)
 }
 
 func driver(words set) {
@@ -66,7 +81,7 @@ func driver(words set) {
 	fmt.Println("")
 }
 
-func suess(words set) {
+func seuss(words set) {
 	file, err := os.Open("greenEggs.txt")
 	if err != nil {
 		log.Fatalln(err)
