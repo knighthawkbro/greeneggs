@@ -1,8 +1,3 @@
-[Virus Total Scan PASSED: 0/57](https://www.virustotal.com/#/file/4e77e4d8bc7b9da84639cac82a2a486a61dfb76ee86b12a0d39120f03e4f8ef3/detection)
-
-SHA256: 4e77e4d8bc7b9da84639cac82a2a486a61dfb76ee86b12a0d39120f03e4f8ef3
-executable name: ./greeneggs
-
 What it can do:
 - Create a linked list and perform functions as a datatype Set
 - Create an Array and perform functions as a datatype Set
@@ -16,3 +11,4 @@ How to build yourself:
 - remove other executable ```rm greeneggs```
 - run ```.\greeneggs.go```
 - conversly you can just run ```go run greeneggs.go``` for an instant execution of the program
+- I think you may need to set your [$GOPATH](https://golang.org/doc/code.html#GOPATH) and create a src folder within for go build to work
